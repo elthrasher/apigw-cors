@@ -1,0 +1,17 @@
+*.js
+*.js.map
+.eslintcache
+.npmrc
+!.eslintrc.js
+!.prettierrc.js
+!jest.config.js
+node_modules
+
+# CDK asset staging directory
+.cdk.staging
+build
+cdk.out
+template.yaml
+
+# coverage
+coverage

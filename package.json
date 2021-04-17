@@ -1,0 +1,53 @@
+{
+  "name": "apigw-cors",
+  "version": "0.0.1",
+  "description": "How to CORS in API Gateway",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf cdk.out coverage",
+    "deploy": "npm run clean && cdk deploy \"*\"",
+    "destroy": "cdk destroy \"*\"",
+    "diff": "cdk diff",
+    "synth": "cdk synth",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API",
+    "AWS",
+    "CDK",
+    "CORS",
+    "Gateway",
+    "SAM",
+    "TypeScript"
+  ],
+  "author": "Matt Morgan",
+  "license": "MIT",
+  "devDependencies": {
+    "@aws-cdk/assert": "1.98.0",
+    "@types/aws-lambda": "^8.10.75",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "aws-cdk": "1.98.0",
+    "esbuild": "^0.11.10",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.5.4",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "1.98.0",
+    "@aws-cdk/aws-apigatewayv2": "1.98.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "1.98.0",
+    "@aws-cdk/aws-lambda": "1.98.0",
+    "@aws-cdk/aws-lambda-nodejs": "1.98.0",
+    "@aws-cdk/aws-logs": "1.98.0",
+    "@aws-cdk/core": "1.98.0"
+  }
+}
