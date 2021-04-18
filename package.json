@@ -8,6 +8,7 @@
     "deploy": "npm run clean && cdk deploy \"*\"",
     "destroy": "cdk destroy \"*\"",
     "diff": "cdk diff",
+    "lint": "eslint --ext .ts .",
     "synth": "cdk synth",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

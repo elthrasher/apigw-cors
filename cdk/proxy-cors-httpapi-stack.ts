@@ -3,7 +3,7 @@ import { LambdaProxyIntegration } from '@aws-cdk/aws-apigatewayv2-integrations';
 import { Runtime } from '@aws-cdk/aws-lambda';
 import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import { LogGroup, RetentionDays } from '@aws-cdk/aws-logs';
-import { Construct, RemovalPolicy, Stack, StackProps } from '@aws-cdk/core';
+import { CfnOutput, Construct, RemovalPolicy, Stack, StackProps } from '@aws-cdk/core';
 import { join } from 'path';
 
 export class ProxyCorsHttpapiStack extends Stack {
@@ -29,5 +29,7 @@ export class ProxyCorsHttpapiStack extends Stack {
     });
 
     httpApi.addRoutes({ integration: httpProxyFnIntegration, methods: [HttpMethod.GET], path: '/' });
+
+    new CfnOutput(this, 'HttpApiEndpoint', { value: httpApi.apiEndpoint });
   }
 }
