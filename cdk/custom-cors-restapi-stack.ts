@@ -31,7 +31,7 @@ export class CustomCorsRestapiStack extends Stack {
           },
           responseTemplates: {
             'application/json': JSON.stringify({
-              message: '$util.parseJson($input.body)',
+              message: { output: '$util.parseJson($input.body)' },
               state: 'ok',
             }),
           },

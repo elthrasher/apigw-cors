@@ -29,17 +29,6 @@ export class ProxyCorsRestapiStack extends Stack {
       },
     });
 
-    restApi.root.addMethod('get', proxyIntegration, {
-      methodResponses: [
-        {
-          statusCode: '200',
-          responseParameters: {
-            'method.response.header.Access-Control-Allow-Credentials': true,
-            'method.response.header.Access-Control-Allow-Origin': true,
-            'method.response.header.Content-Type': true,
-          },
-        },
-      ],
-    });
+    restApi.root.addMethod('get', proxyIntegration);
   }
 }
