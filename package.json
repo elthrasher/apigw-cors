@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf cdk.out coverage",
-    "deploy": "npm run clean && cdk deploy \"*\"",
-    "destroy": "cdk destroy \"*\"",
+    "deploy": "npm run clean && cdk deploy \"*\" --require-approval never",
+    "destroy": "cdk destroy \"*\" --force",
     "diff": "cdk diff",
     "lint": "eslint --ext .ts .",
     "synth": "cdk synth",
