@@ -25,7 +25,7 @@ export class ProxyCorsHttpapiStack extends Stack {
     const httpProxyFnIntegration = new LambdaProxyIntegration({ handler: proxyFn });
 
     const httpApi = new HttpApi(this, 'ProxyCorsHttpApi', {
-      corsPreflight: { allowMethods: [CorsHttpMethod.GET], allowOrigins: ['*'] },
+      corsPreflight: { allowMethods: [CorsHttpMethod.ANY], allowOrigins: ['*'] },
     });
 
     httpApi.addRoutes({ integration: httpProxyFnIntegration, methods: [HttpMethod.GET], path: '/' });

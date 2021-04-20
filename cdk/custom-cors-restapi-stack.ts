@@ -25,9 +25,7 @@ export class CustomCorsRestapiStack extends Stack {
       integrationResponses: [
         {
           responseParameters: {
-            'method.response.header.Access-Control-Allow-Credentials': "'true'",
             'method.response.header.Access-Control-Allow-Origin': "'*'",
-            'method.response.header.Content-Type': "'application/json'",
           },
           responseTemplates: {
             'application/json': JSON.stringify({
@@ -58,9 +56,7 @@ export class CustomCorsRestapiStack extends Stack {
         {
           statusCode: '200',
           responseParameters: {
-            'method.response.header.Content-Type': true,
             'method.response.header.Access-Control-Allow-Origin': true,
-            'method.response.header.Access-Control-Allow-Credentials': true,
           },
         },
       ],
